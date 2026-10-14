@@ -7,40 +7,43 @@ redirect_from:
   - /about.html
 ---
 
-# Xu Gao / 高旭
+I am Xu Gao, a graduate of Tsinghua University's Xingjian College, where I studied Theoretical and Applied Mechanics and Energy and Power Engineering as a double major. My interdisciplinary background spans engineering, scientific computing, and computational materials research.
 
-**Building intelligent systems from scientific modeling to real-world applications.**
+My research focuses on **AI for Science and scientific agents**, particularly how AI systems can interpret scientific evidence, interact with domain-specific tools, and make reliable decisions within complex computational workflows.
 
-I am an undergraduate at Xingjian College, Tsinghua University, with an interdisciplinary background in mechanics, energy engineering, and AI-driven system development. My work focuses on turning research ideas into practical systems through modeling, programming, and end-to-end implementation.
+I approach these questions from two complementary directions. In an independent research project, I am developing an artifact-grounded benchmark for evaluating scientific competence in density functional theory (DFT) workflows, with an emphasis on evidence inspection, measurement validity, and reproducible evaluation. In the collaborative Perovskite Agent Lab project, I work on materials-domain MCP tool integration and scientific workflow interfaces connecting AI agents with computational tools.
 
-I am particularly interested in intelligent interactive systems, applied AI, and multimodal technologies. My past work spans computer vision, scientific machine learning, simulation-based research, and AI product prototyping. I am especially motivated by problems that require connecting perception, reasoning, and system design to create tools or prototypes that are both technically rigorous and practically useful.
+Building on my background in scientific computing and engineering, I am interested in developing **reliable, evidence-grounded agents for autonomous scientific discovery**, including future applications in computational materials science and AI-driven drug discovery.
 
-## Research & Technical Interests
+## Research Interests
 
-* **AI-driven interactive systems:** Designing and implementing practical intelligent systems that connect user needs, model capabilities, and deployable workflows.
-* **Multimodal and applied AI:** Exploring computer vision, language-based intelligence, retrieval-augmented generation (RAG), and multimodal methods for real-world problem solving.
-* **End-to-end system building:** Developing complete pipelines from data processing and model design to system integration, testing, and deployment.
-* **XR-oriented intelligent systems:** I am highly interested in extending my background in AI systems, perception, and interactive tool building toward XR environments and immersive intelligent applications.
+* **Scientific Agent Evaluation:** Artifact-grounded benchmarking, scientific reasoning, and measurement validity.
+* **Agentic Scientific Workflows:** Tool-augmented reasoning, workflow orchestration, and scientific execution reliability.
+* **Computational Materials Science:** DFT, materials modeling, and simulation-driven research.
+* **Autonomous Scientific Discovery:** Evidence-grounded decision-making, scientific feedback loops, and future applications in AI-driven drug discovery.
 
-## Background
+## Selected Research
 
-My academic training in **Applied and Theoretical Mechanics** and **Energy and Power Engineering** has given me a solid foundation in mathematical modeling, physical reasoning, and rigorous analysis. In parallel, I have developed strong interests in AI and system implementation through both research and entrepreneurial projects.
+### [Evaluating Agents for Autonomous DFT Workflows]({{ site.baseurl }}/research/dft-agent-benchmark/)
 
-In research, I have worked on **machine learning and computer vision for ultra-short-term photovoltaic forecasting**, where I developed a hybrid framework integrating cloud motion and shadow generation for PV power prediction. I have also worked on **climate model downscaling**, adapting the NREL sup3r framework for higher-resolution prediction, as well as several simulation- and modeling-intensive interdisciplinary projects across mechanics, materials, and energy systems. 
+*Independent Research · 2026–Present*
 
-Beyond academic research, I have been involved in **AI entrepreneurship and applied system development**. My project experience includes building an **AI + Finance workflow** involving retrieval-augmented generation and factor-linked stock prediction, as well as designing and deploying an **AI agent and hardware application/management system** for the Tsinghua iCenter course *Introduction to AI Entrepreneurship*. These experiences strengthened my interest in building complete AI systems that integrate data, models, interfaces, and real user scenarios.
+An artifact-grounded testbed for investigating the scientific competence of AI agents in DFT workflows. The research focuses on computational evidence inspection, case-specific scientific judgments, reproducible evaluation, and measurement validity.
 
-I am especially drawn to research that goes beyond isolated models and moves toward integrated systems, interactive prototypes, and impactful applications.
+### [Perovskite Agent Lab]({{ site.baseurl }}/research/perovskite-agent-lab/)
 
-## Education
+*Collaborative Research · 2026–Present*
 
-* **B.S. in Applied and Theoretical Mechanics & Energy and Power Engineering (Double Major)**, Tsinghua University, 2021–2025
-* **Certificate in Industrial Engineering and Data Science**, Tsinghua University
-* **Certificate in Artificial Intelligence Innovation and Entrepreneurship Enhancement Program**, Tsinghua University 
+A multi-agent research platform exploring scientific tool integration and computational workflows for perovskite materials. My contributions focus on materials-domain MCP/Skills integration and agent-accessible scientific tools, alongside collaborative demonstrations involving VASP and SCAPS.
 
-## Contact
+[View All Research]({{ site.baseurl }}/research/)
 
-I am particularly interested in opportunities at the intersection of intelligent interaction, multimodal AI, and next-generation immersive systems. I hope to contribute to research that combines strong technical implementation with meaningful real-world application.
+## Additional Academic Work
 
-* **Email:** [osborngx348@163.com](mailto:osborngx348@163.com)
-* **CV:** [Download my CV]({{ site.baseurl }}/files/cv.pdf)
+My earlier research spans computational materials science, photovoltaic applications, and mechanical systems. Additional publications and selected projects are available through the sections below.
+
+* [Publications]({{ site.baseurl }}/publications/)
+* [Selected Previous Projects]({{ site.baseurl }}/portfolio/)
+* [Curriculum Vitae]({{ site.baseurl }}/cv/)
+
+A PDF version of my CV is also available to [download]({{ site.baseurl }}/files/cv.pdf).
