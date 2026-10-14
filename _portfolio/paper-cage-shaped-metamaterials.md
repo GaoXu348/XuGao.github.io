@@ -83,14 +83,14 @@ While this project sits in mechanics/metamaterials, the underlying capabilities 
 ## Research Media
 
 ### Temperature-induced self-folding element
-![Bi-material bistable structure]({{ site.baseurl }}/images/bistable element.png)
+![Bi-material bistable structure]({{ site.baseurl }}/images/bistable-element.png)
 - Bimaterial bistable structures fabricated via 3D printing with two material systems: **PETG–TPU** and **PLA–TPU**.
 
 ![FEM simulations and experimental validation]({{ site.baseurl }}/images/femex.png)
 - Folding driven by release of stored elastic energy, triggered by heating. A dot–rod schematic illustrates concave/convex rotations during the folding process.
 
 ### Temperature-induced self-folding path
-![Experimental demonstration of temperature-induced tunable bistability]({{ site.baseurl }}/images/experimental demonstration.png)
+![Experimental demonstration of temperature-induced tunable bistability]({{ site.baseurl }}/images/experimental-demonstration.png)
 - Structures transition to a second stable state under compression at room temperature, then return upon heating to **65°C** and **85°C** to trigger staged folding. (Scale bar: 1 cm)
 
 ### Mechanical analysis

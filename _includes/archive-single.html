@@ -67,10 +67,10 @@
           <p style="margin: 0.25rem 0;"><a href="{% if post.link contains '://' %}{{ post.link }}{% else %}{{ post.link | relative_url }}{% endif %}" target="_blank" style="color: #3498db; text-decoration: none;"> Link/pdf</a></p>
         {% endif %}
         {% if post.github %}
-          <p style="margin: 0.25rem 0;"><a href="{{ post.github }}" target="_blank" style="color: #333; text-decoration: none;">💻 GitHub代码</a></p>
+          <p style="margin: 0.25rem 0;"><a href="{{ post.github }}" target="_blank" style="color: #333; text-decoration: none;">💻 GitHub</a></p>
         {% endif %}
         {% if post.demo %}
-          <p style="margin: 0.25rem 0;"><a href="{{ post.demo }}" target="_blank" style="color: #27ae60; text-decoration: none;">🚀 在线演示</a></p>
+          <p style="margin: 0.25rem 0;"><a href="{{ post.demo }}" target="_blank" style="color: #27ae60; text-decoration: none;">🚀 Live Demo</a></p>
         {% endif %}
         {% if post.doi %}
           <p style="margin: 0.25rem 0;"><a href="https://doi.org/{{ post.doi }}" target="_blank" style="color: #e74c3c; text-decoration: none;">📚 DOI: {{ post.doi }}</a></p>
