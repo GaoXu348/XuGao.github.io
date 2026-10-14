@@ -275,6 +275,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      hide_date: true # research entries show a period, not an event date
 
 
 # Sass/SCSS
