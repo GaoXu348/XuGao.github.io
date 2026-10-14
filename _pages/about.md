@@ -7,9 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-## About Me
-
-I am Xu Gao, a graduate of Tsinghua University with an interdisciplinary background in engineering, scientific computing, and computational materials research.
+I am Xu Gao, a graduate of Tsinghua University's Xingjian College, where I studied Theoretical and Applied Mechanics and Energy and Power Engineering as a double major. My interdisciplinary background spans engineering, scientific computing, and computational materials research.
 
 My research focuses on **AI for Science and scientific agents**, particularly how AI systems can interpret scientific evidence, interact with domain-specific tools, and make reliable decisions within complex computational workflows.
 
