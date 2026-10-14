@@ -18,7 +18,7 @@ keywords: "DFT, VASP, Scientific Reasoning, Artifact-Grounded Evaluation, Autono
 
 *An Artifact-Grounded Testbed for Scientific Competence Diagnosis*
 
-**Independent Research | 2026–Present | Ongoing**
+**Independent Research &#124; 2026–Present &#124; Ongoing**
 
 - **Researcher:** Xu Gao — Independent Researcher (sole researcher)
 - **Research areas:** AI for Science; Scientific Agents; Agent Evaluation; Computational Materials Science
