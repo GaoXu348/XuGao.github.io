@@ -5,6 +5,16 @@ permalink: /research/
 author_profile: true
 ---
 
-{% for post in site.research %}
+{% capture research_intro %}
+My research focuses on **AI for Science and scientific agents**, with an emphasis on artifact-grounded evaluation, scientific reasoning, and autonomous computational workflows.
+
+I am particularly interested in how AI agents can interpret scientific evidence, interact with domain-specific tools, and make reliable decisions in complex research environments. The projects below explore these questions through benchmark development, scientific computing, and agent-based research systems.
+{% endcapture %}
+
+{{ research_intro | markdownify }}
+
+{% comment %}Ordered by an explicit field: Jekyll synthesises a build date for collection documents, so date order is not meaningful here.{% endcomment %}
+{% assign research_items = site.research | sort: "display_order" %}
+{% for post in research_items %}
   {% include archive-single-research.html %}
 {% endfor %}

@@ -8,6 +8,7 @@ excerpt: >-
   judgments in DFT workflows.
 collection: research
 permalink: /research/dft-agent-benchmark/
+display_order: 1
 role: "Independent Research"
 period: "2026–Present"
 status: "Ongoing Research"
