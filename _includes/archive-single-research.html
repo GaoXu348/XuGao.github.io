@@ -25,5 +25,10 @@
         {% if post.role %}{{ post.role }}{% endif %}{% if post.role and post.period %} &middot; {% endif %}{% if post.period %}{{ post.period }}{% endif %}
       </p>
     {% endif %}
+
+    {% comment %}Optional: card_keywords adds a short keyword line to the listing card only. Records without it render exactly as before.{% endcomment %}
+    {% if post.card_keywords %}
+      <p class="page__meta"><strong>Keywords:</strong> {{ post.card_keywords }}</p>
+    {% endif %}
   </article>
 </div>
