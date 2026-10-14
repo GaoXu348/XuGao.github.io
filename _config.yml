@@ -12,9 +12,9 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Xu Gao"
 title_separator          : "-"
 name                     : &name "Xu Gao"
-url                      : https://osbornendeavour.github.io # the base hostname & protocol for your site
+url                      : https://gaoxu348.github.io # the base hostname & protocol for your site
 baseurl                  : /XuGao.github.io # 项目站点子路径，必须与仓库名一致
-repository               : "OsbornEndeavour/XuGao.github.io"
+repository               : "GaoXu348/XuGao.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
