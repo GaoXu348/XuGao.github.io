@@ -11,12 +11,22 @@ body {
   /* Set via _themes.scss */
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  /* A barely-there measurement grid — the lab-notebook substrate. */
+  background-image:
+    linear-gradient(var(--tech-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--tech-grid-line) 1px, transparent 1px);
+  background-size: 36px 36px;
+  background-position: -1px -1px;
 
   margin: 0;
   padding: $masthead-height 0 0;
   padding-bottom: 9em;
   font-family: $global-font-family;
-  line-height: 1.5;
+  font-size: $doc-font-size;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -26,22 +36,28 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 2em 0 0.5em;
-  line-height: 1.2;
+  line-height: 1.25;
   font-family: $header-font-family;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--global-text-color);
 }
 
 h1 {
   margin-top: 0;
   font-size: $type-size-3;
+  letter-spacing: -0.028em;
+  font-weight: 700;
 }
 
 h2 {
   font-size: $type-size-4;
+  letter-spacing: -0.02em;
 }
 
 h3 {
   font-size: $type-size-5;
+  letter-spacing: -0.012em;
 }
 
 h4 {
@@ -96,14 +112,22 @@ abbr[data-original-title] {
 /* blockquotes */
 
 blockquote {
-  margin: 2em 1em 2em 0;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-style: italic;
-  border-left: 0.25em solid var(--global-border-color);
+  margin: 2em 0 2em 0;
+  padding: 0.9em 1.2em;
+  font-style: normal;
+  color: var(--global-text-color-light);
+  background: var(--tech-surface);
+  border-left: 2px solid var(--tech-accent-line);
+  border-radius: 0 $border-radius $border-radius 0;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 
   cite {
-    font-style: italic;
+    font-style: normal;
+    font-family: $mono-font-family;
+    font-size: $type-size-7;
 
     &:before {
       content: "\2014";
@@ -115,14 +139,39 @@ blockquote {
 /* links */
 
 a {
+  color: var(--global-link-color);
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+
+  &:hover,
+  &:active {
+    color: var(--global-link-color-hover);
+    text-decoration: underline;
+  }
+
   &:focus {
     @extend %tab-focus;
   }
 
-  &:hover,
-  &:active {
-    outline: 0;
+  &:focus:not(:focus-visible) {
+    outline: none;
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--tech-accent);
+    outline-offset: 2px;
+    border-radius: 1px;
+  }
+}
+
+/* Inline text links inside prose */
+p > a,
+li > a,
+blockquote > a,
+td > a {
+  text-decoration: underline;
+  text-decoration-color: var(--tech-accent-line);
 }
 
 /* code */
@@ -167,9 +216,9 @@ pre > code {
 
 hr {
   display: block;
-  margin: 1em 0;
+  margin: 2em 0;
   border: 0;
-  border-top: 1px solid var(--global-border-color);
+  border-top: 1px solid var(--tech-rule);
 }
 
 /* lists */
@@ -343,6 +392,28 @@ nav {
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   Honour the operating-system preference: no transitions, no scroll
+   behaviour, no keyframe animations anywhere on the site.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.001ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ==========================================================================

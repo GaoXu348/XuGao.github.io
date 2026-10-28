@@ -1,5 +1,7 @@
 /* ==========================================================================
-   DEFAULT THEME
+   LIGHT THEME — the same instrument-panel system, inverted for daylight.
+   Structure and token names are identical to the dark theme so that every
+   stylesheet works against one vocabulary.
    ========================================================================== */
 
 /* Color codes used for the theme */
@@ -10,38 +12,55 @@ $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
 /* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
+$danger-color               : #c0392b;
+$info-color                 : #0a7682;
+$notice-color               : #6d7889;
+$success-color              : #2e7d32;
+$warning-color              : #b26a00;
 
 /* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition          : all 0.2s ease-in-out;
+$border-radius              : 3px;
+$box-shadow                 : 0 1px 2px rgba(16, 24, 40, 0.08);
+$global-transition          : all 0.18s ease-in-out;
 $masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
+$navicon-width              : 26px;
+$navicon-height             : 2px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Default light theme for the site */
+/* Light theme for the site */
 :root {
     --global-base-color                 : #{$gray};
-    --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
-    --global-border-color               : #{$lighter-gray};
-    --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
-    --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$lighter-gray};
+    --global-bg-color                   : #f5f6f8;
+    --global-footer-bg-color            : #eceef2;
+    --global-border-color               : #dcdfe6;
+    --global-dark-border-color          : #c4c9d3;
+    --global-code-background-color      : #eef0f4;
+    --global-code-text-color            : #364050;
+    --global-fig-caption-color          : #646e80;
+    --global-link-color                 : #0a7682;
+    --global-link-color-hover           : #075c66;
+    --global-link-color-visited         : #0a6a76;
+    --global-masthead-link-color        : #1b2230;
+    --global-masthead-link-color-hover  : #000;
+    --global-text-color                 : #1b2230;
+    --global-text-color-light           : #5d6779;
+    --global-thead-color                : #e9ecf1;
+
+    /* Design tokens — light */
+    --tech-accent                       : #0a7682;
+    --tech-accent-2                     : #6d4bd0;
+    --tech-accent-soft                  : rgba(10, 118, 130, 0.09);
+    --tech-accent-line                  : rgba(10, 118, 130, 0.30);
+    --tech-accent-2-soft                : rgba(109, 75, 208, 0.09);
+    --tech-accent-2-line                : rgba(109, 75, 208, 0.28);
+    --tech-surface                      : #ffffff;
+    --tech-surface-2                    : #f1f3f7;
+    --tech-surface-3                    : #e7eaf0;
+    --tech-rule                         : #dcdfe6;
+    --tech-rule-soft                    : #e8ebf0;
+    --tech-text-faint                   : #646e80;
+    --tech-grid-line                    : rgba(10, 118, 130, 0.035);
+    --tech-shadow                       : 0 1px 2px rgba(16, 24, 40, 0.06), 0 12px 30px rgba(16, 24, 40, 0.07);
+    --tech-shadow-sm                    : 0 1px 2px rgba(16, 24, 40, 0.07);
 }

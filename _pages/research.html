@@ -15,6 +15,8 @@ I am particularly interested in how AI agents can interpret scientific evidence,
 
 {% comment %}Ordered by an explicit field: Jekyll synthesises a build date for collection documents, so date order is not meaningful here.{% endcomment %}
 {% assign research_items = site.research | sort: "display_order" %}
-{% for post in research_items %}
-  {% include archive-single-research.html %}
-{% endfor %}
+<div class="project-grid">
+  {% for post in research_items %}
+    {% include archive-single-research.html %}
+  {% endfor %}
+</div>

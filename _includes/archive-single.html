@@ -61,22 +61,33 @@
     {% endif %}
     
     <!-- 为portfolio项目添加外部链接显示 -->
-    {% if post.collection == 'portfolio' and post.link %}
-      <div class="portfolio-external-links" style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #3498db;">
-        <h4 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1rem;">🔗 Link</h4>
-        {% if post.link %}
-          <p style="margin: 0.25rem 0;"><a href="{% if post.link contains '://' %}{{ post.link }}{% else %}{{ post.link | relative_url }}{% endif %}" target="_blank" style="color: #3498db; text-decoration: none;"> Link/pdf</a></p>
-        {% endif %}
-        {% if post.github %}
-          <p style="margin: 0.25rem 0;"><a href="{{ post.github }}" target="_blank" style="color: #333; text-decoration: none;">💻 GitHub</a></p>
-        {% endif %}
-        {% if post.demo %}
-          <p style="margin: 0.25rem 0;"><a href="{{ post.demo }}" target="_blank" style="color: #27ae60; text-decoration: none;">🚀 Live Demo</a></p>
-        {% endif %}
-        {% if post.doi %}
-          <p style="margin: 0.25rem 0;"><a href="https://doi.org/{{ post.doi }}" target="_blank" style="color: #e74c3c; text-decoration: none;">📚 DOI: {{ post.doi }}</a></p>
-        {% endif %}
-      </div>
+    {% if post.collection == 'portfolio' %}
+      {% if post.venue or post.project %}
+        <p class="record-meta">
+          {% if post.venue %}{{ post.venue }}{% endif %}
+          {% if post.venue and post.project %}<span class="record-meta__sep" aria-hidden="true">/</span>{% endif %}
+          {% if post.project %}{{ post.project }}{% endif %}
+        </p>
+      {% endif %}
+      {% if post.link or post.github or post.demo or post.doi %}
+        <div class="record-links">
+          <span class="record-links__label">Links</span>
+          <ul class="record-links__list">
+            {% if post.link %}
+              <li><a href="{% if post.link contains '://' %}{{ post.link }}{% else %}{{ post.link | relative_url }}{% endif %}" target="_blank" rel="noopener">Link{% if post.doi %} / PDF{% endif %}</a></li>
+            {% endif %}
+            {% if post.github %}
+              <li><a href="{{ post.github }}" target="_blank" rel="noopener">GitHub</a></li>
+            {% endif %}
+            {% if post.demo %}
+              <li><a href="{{ post.demo }}" target="_blank" rel="noopener">Live demo</a></li>
+            {% endif %}
+            {% if post.doi %}
+              <li><a href="https://doi.org/{{ post.doi }}" target="_blank" rel="noopener">DOI</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      {% endif %}
     {% endif %}
     
     {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}

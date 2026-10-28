@@ -25,19 +25,31 @@
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
           animation-delay: 0.45s;
-  border-top: 1px solid var(--global-dark-border-color);
+  border-top: 1px solid var(--tech-rule);
 
   footer {
     @include clearfix;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 1.4rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
     max-width: 100%;
-    padding: 0 1em 1em;
+    padding: 1.1rem 1em 1.2rem;
 
-    @include breakpoint($x-large) {
-      max-width: $x-large;
+    @include breakpoint($large) {
+      max-width: $content-width;
     }
+  }
+
+  .footer__link {
+    color: var(--global-text-color-light);
+    font-family: $mono-font-family;
+    font-size: $type-size-8;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
   a {
@@ -45,7 +57,8 @@
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      color: var(--tech-accent);
+      text-decoration: none;
     }
   }
 
@@ -58,8 +71,13 @@
 }
 
 .page__footer-copyright {
-  font-family: $global-font-family;
-  font-size: $type-size-7;
+  flex: 1 0 100%;
+  margin: 0;
+  color: var(--tech-text-faint);
+  font-family: $mono-font-family;
+  font-size: $type-size-8;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
 }
 
 .page__footer-follow {
@@ -73,8 +91,9 @@
     display: inline-block;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: $sans-serif-narrow;
-    font-size: $type-size-6;
+    font-family: $mono-font-family;
+    font-size: $type-size-8;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
@@ -85,7 +104,7 @@
 
   a {
     padding-right: 10px;
-    font-weight: bold;
+    color: var(--global-text-color-light);
   }
 
   .social-icons {

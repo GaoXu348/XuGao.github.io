@@ -11,16 +11,32 @@
   animation: intro 0.3s both;
   animation-delay: 0.35s;
 
-  @include breakpoint($x-large) {
-    max-width: $x-large;
+  @include breakpoint($large) {
+    max-width: $content-width;
+
+    /* Two-column frame: an optional identity rail and the record column.
+       Flexbox rather than floats so the rail can never overlap the text.
+       The gutter is a margin on the rail, not `column-gap` — engines
+       disagree on how gap is charged against the flex free space. */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    > * {
+      min-width: 0;
+    }
+
+    .splash {
+      flex: 1 1 0;
+    }
   }
 }
 
 .page {
   @include breakpoint($large) {
-    @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    flex: 1 1 0;
+    width: auto;
+    float: none;
   }
 
   .page__inner-wrap {
@@ -385,7 +401,8 @@
   float: left;
 
   @include breakpoint($large) {
-    @include pre(2.5 of 12);
+    flex: 1 0 100%;
+    margin-left: 0;
   }
 
   a {
