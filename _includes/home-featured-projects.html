@@ -1,0 +1,8 @@
+{% include base_path %}
+
+{% assign featured = site.research | sort: 'display_order' %}
+<div class="project-grid">
+  {% for post in featured %}
+    {% include project-card.html post=post index=forloop.index %}
+  {% endfor %}
+</div>

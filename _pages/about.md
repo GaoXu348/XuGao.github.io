@@ -1,7 +1,8 @@
 ---
 permalink: /
 title: "About Me"
-author_profile: true
+layout: home
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
@@ -24,19 +25,9 @@ Building on my background in scientific computing and engineering, I am interest
 
 ## Selected Research
 
-### [Evaluating Agents for Autonomous DFT Workflows]({{ site.baseurl }}/research/dft-agent-benchmark/)
+{% include home-featured-projects.html %}
 
-*Independent Research · 2026–Present*
-
-An artifact-grounded testbed for investigating the scientific competence of AI agents in DFT workflows. The research focuses on computational evidence inspection, case-specific scientific judgments, reproducible evaluation, and measurement validity.
-
-### [Perovskite Agent Lab]({{ site.baseurl }}/research/perovskite-agent-lab/)
-
-*Collaborative Research · 2026–Present*
-
-A multi-agent research platform exploring scientific tool integration and computational workflows for perovskite materials. My contributions focus on materials-domain MCP/Skills integration and agent-accessible scientific tools, alongside collaborative demonstrations involving VASP and SCAPS.
-
-[View All Research]({{ site.baseurl }}/research/)
+[All research records]({{ site.baseurl }}/research/)
 
 ## Additional Academic Work
 

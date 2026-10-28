@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div class="home">
+  {% include home-hero.html %}
+
+  <div id="main" role="main" class="home__main">
+    <article class="home__body">
+      <div class="page__inner-wrap">
+        <section class="page__content home__content" itemprop="text">
+          {{ content }}
+        </section>
+      </div>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+{% include base_path %}
+
+<header class="hero">
+  <div class="hero__inner">
+
+    <div class="hero__main">
+      <div class="hero__identity">
+        {% if site.author.avatar %}
+          <img class="hero__avatar" src="{{ site.author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ site.author.name }}" fetchpriority="high">
+        {% endif %}
+
+        <div class="hero__id-text">
+          {% if site.author.bio %}<p class="hero__eyebrow">{{ site.author.bio }}</p>{% endif %}
+          <h1 class="hero__title">{{ site.title }}</h1>
+        </div>
+      </div>
+
+      <nav class="hero__actions" aria-label="Primary sections">
+        <a class="hero__action" href="{{ base_path }}/research/"><span class="hero__action-key">01</span>Research</a>
+        <a class="hero__action" href="{{ base_path }}/publications/"><span class="hero__action-key">02</span>Publications</a>
+        <a class="hero__action" href="{{ base_path }}/cv/"><span class="hero__action-key">03</span>CV</a>
+      </nav>
+    </div>
+
+    <aside class="hero__panel">
+      <p class="hero__panel-title">Identifiers</p>
+      <dl class="hero__panel-list">
+        {% if site.author.location %}
+          <div class="hero__panel-row">
+            <dt>Location</dt>
+            <dd>{{ site.author.location }}</dd>
+          </div>
+        {% endif %}
+        {% if site.author.orcid %}
+          <div class="hero__panel-row">
+            <dt>ORCID</dt>
+            <dd><a href="{{ site.author.orcid }}">{{ site.author.orcid | split: '/' | last }}</a></dd>
+          </div>
+        {% endif %}
+        {% if site.author.github %}
+          <div class="hero__panel-row">
+            <dt>GitHub</dt>
+            <dd><a href="https://github.com/{{ site.author.github }}">{{ site.author.github }}</a></dd>
+          </div>
+        {% endif %}
+        {% if site.author.email %}
+          <div class="hero__panel-row">
+            <dt>Email</dt>
+            <dd><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></dd>
+          </div>
+        {% endif %}
+      </dl>
+    </aside>
+
+  </div>
+</header>

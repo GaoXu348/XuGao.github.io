@@ -1,0 +1,46 @@
+{% comment %}
+  Shared header for research records. All values come from the record's own
+  front matter, so the two detail pages share one visual language without
+  restating or altering the scientific claims.
+{% endcomment %}
+<div class="record-head">
+  {% if page.subtitle %}
+    <p class="record-head__subtitle">{{ page.subtitle }}</p>
+  {% endif %}
+
+  <dl class="record-head__facts">
+    {% if page.role %}
+      <div class="record-head__fact">
+        <dt>Role</dt>
+        <dd>{{ page.role }}</dd>
+      </div>
+    {% endif %}
+    {% if page.researcher %}
+      <div class="record-head__fact">
+        <dt>Researcher</dt>
+        <dd>{{ page.researcher }}</dd>
+      </div>
+    {% endif %}
+    {% if page.period %}
+      <div class="record-head__fact">
+        <dt>Period</dt>
+        <dd>{{ page.period }}</dd>
+      </div>
+    {% endif %}
+    {% if page.status %}
+      <div class="record-head__fact">
+        <dt>Status</dt>
+        <dd>{{ page.status }}</dd>
+      </div>
+    {% endif %}
+  </dl>
+
+  <div class="record-head__tags">
+    {% if page.research_areas %}
+      <p class="record-head__line"><span class="record-head__label">Research areas</span>{{ page.research_areas }}</p>
+    {% endif %}
+    {% if page.keywords %}
+      <p class="record-head__line"><span class="record-head__label">Keywords</span>{{ page.keywords }}</p>
+    {% endif %}
+  </div>
+</div>

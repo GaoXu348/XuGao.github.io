@@ -14,15 +14,12 @@ period: "2026–Present"
 status: "Ongoing Research"
 research_areas: "AI for Science; Scientific Agents; Agent Evaluation; Computational Materials Science"
 keywords: "DFT, VASP, Scientific Reasoning, Artifact-Grounded Evaluation, Autonomous Scientific Workflows, Benchmark Validity"
+card_summary: "An artifact-grounded testbed for investigating the scientific competence of AI agents in DFT workflows. The research focuses on computational evidence inspection, case-specific scientific judgments, reproducible evaluation, and measurement validity."
+card_facts: "17 benchmark cases · 11 scientific challenges"
+researcher: "Xu Gao — sole researcher"
 ---
 
-*An Artifact-Grounded Testbed for Scientific Competence Diagnosis*
-
-**Independent Research &#124; 2026–Present &#124; Ongoing**
-
-- **Researcher:** Xu Gao — Independent Researcher (sole researcher)
-- **Research areas:** AI for Science; Scientific Agents; Agent Evaluation; Computational Materials Science
-- **Keywords:** DFT, VASP, Scientific Reasoning, Artifact-Grounded Evaluation, Autonomous Scientific Workflows, Benchmark Validity
+{% include record-head.html %}
 
 ## Overview
 
@@ -38,25 +35,35 @@ The research focuses on assessing scientific judgment through computational arti
 
 The project investigates three connected problems:
 
-**1. Scientific Competence**
-
-Can AI agents correctly interpret raw computational outputs, recognize relevant evidence, and distinguish scientifically supported conclusions from plausible but incorrect interpretations?
-
-**2. Evaluation Validity**
-
-How can scientific benchmark tasks and scoring mechanisms be designed to measure the competencies they claim to evaluate?
-
-In particular, does producing a correct scientific answer imply that the agent used scientifically valid evidence and reasoning?
-
-**3. Reliable Scientific Workflows**
-
-How can scientific-agent evaluation be made reproducible and auditable while accounting for tool constraints, intermediate artifacts, execution failures, and uncertainty?
+<div class="dimension-grid">
+  <section class="dimension">
+    <p class="dimension__index">01</p>
+    <h3 class="dimension__title">Scientific Competence</h3>
+    <p class="dimension__text">Can AI agents correctly interpret raw computational outputs, recognize relevant evidence, and distinguish scientifically supported conclusions from plausible but incorrect interpretations?</p>
+  </section>
+  <section class="dimension">
+    <p class="dimension__index">02</p>
+    <h3 class="dimension__title">Evaluation Validity</h3>
+    <p class="dimension__text">How can scientific benchmark tasks and scoring mechanisms be designed to measure the competencies they claim to evaluate? In particular, does producing a correct scientific answer imply that the agent used scientifically valid evidence and reasoning?</p>
+  </section>
+  <section class="dimension">
+    <p class="dimension__index">03</p>
+    <h3 class="dimension__title">Reliable Scientific Workflows</h3>
+    <p class="dimension__text">How can scientific-agent evaluation be made reproducible and auditable while accounting for tool constraints, intermediate artifacts, execution failures, and uncertainty?</p>
+  </section>
+</div>
 
 ## Methodology
 
 The evaluation framework connects scientific task construction, controlled artifact inspection, structured scientific responses, and reproducible scoring.
 
-Scientific Challenges → Artifact Sandbox → Agent–Tool Interaction → Structured Scientific Response → Evaluation & Validity Analysis
+<ol class="flow">
+  <li class="flow__step"><span class="flow__step__index">01</span><span class="flow__step__label">Scientific Challenges</span></li>
+  <li class="flow__step"><span class="flow__step__index">02</span><span class="flow__step__label">Artifact Sandbox</span></li>
+  <li class="flow__step"><span class="flow__step__index">03</span><span class="flow__step__label">Agent&ndash;Tool Interaction</span></li>
+  <li class="flow__step"><span class="flow__step__index">04</span><span class="flow__step__label">Structured Scientific Response</span></li>
+  <li class="flow__step"><span class="flow__step__index">05</span><span class="flow__step__label">Evaluation &amp; Validity Analysis</span></li>
+</ol>
 
 **Artifact-Grounded Benchmark Construction**
 
@@ -140,3 +147,16 @@ The long-term objective is to develop more reliable methods for assessing AI age
 Future work will focus on completing independently validated scientific reference materials, conducting formal controlled agent evaluations, and investigating the relationship between outcome correctness and evidence-grounded scientific reasoning.
 
 More broadly, this research aims to contribute to the development of scientific agents capable of making reliable, traceable, and evidence-supported decisions across computational science and autonomous scientific discovery.
+
+## Scope and Limitations
+
+<div class="scope">
+  <p class="scope__title">Scope and Limitations</p>
+  <ul class="scope__list">
+    <li class="scope__item">The frozen evaluation uses an <strong>outcome-based scoring construct</strong>. A correct reported value or conclusion can coexist with an incorrect scientific premise, an inconsistent interpretation, or an unsupported explanatory claim.</li>
+    <li class="scope__item"><strong>Evidence-Justified Success</strong> remains a research-stage specification. It has not been implemented as an approved replacement for the frozen scoring mechanism.</li>
+    <li class="scope__item">Internal validation covers the benchmark and scoring implementation. It is <strong>not a measurement of agent scientific performance</strong> and does not constitute independent expert validation of the scientific reference answers.</li>
+    <li class="scope__item">The formal multi-model evaluation has <strong>not yet produced reportable scientific performance results</strong>, because execution has been affected by external infrastructure reliability issues.</li>
+    <li class="scope__item"><strong>Independent expert review</strong> of the scientific reference materials remains pending.</li>
+  </ul>
+</div>

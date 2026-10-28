@@ -10,14 +10,14 @@ redirect_from:
 {% include base_path %}
 
 Education
-======
+------
 
 * B.S. in **Theoretical and Applied Mechanics** & **Energy and Power Engineering**, Tsinghua University, 2025
   * Certificate of **Industrial Engineering and Data Science** issued by Department of Industrial Engineering, Tsinghua University
   * Certificate of **Artificial Intelligence Innovation and Entrepreneurship Enhancement Program** issued by Fundamental Industry Training Center, Tsinghua University
 
 Research experience(Click to see more details)
-======
+------
 * **Jan.2025-Jun.2025**: **Physics-Informed Deep Learning for Geolocatable Photovoltaic Forecasting**
   * Researcher in 李水清's lab, Department of Energy and Power Engineering, Tsinghua University
   * **Engineered a physics-informed deep learning pipeline** for ultra-short-term photovoltaic forecasting, integrating Partial Differential Equations (PDEs) via the PhyDNet architecture to model realistic cloud motion and dissipation.
@@ -51,7 +51,7 @@ Research experience(Click to see more details)
   * Overview of UAV power systems and simulation experiments of fixed-wing UAV power systems.
 
 Skills
-======
+------
 * Abaqus, 3D print, Solidworks: Calibration & Validation
 * Coding
   * Python for machine learning: Pytorch, Tensorflow
@@ -60,7 +60,7 @@ Skills
 * Dedicated to dive in new area all the time
 
 Publications
-======
+------
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>

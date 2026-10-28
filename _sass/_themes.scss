@@ -15,12 +15,16 @@ $indent-var                 : 1.3em;
 
 /* System typefaces */
 $serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
+$sans-serif                 : -apple-system, BlinkMacSystemFont, system-ui, ".SFNSText-Regular", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$monospace                  : ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 /* Sans serif typefaces */
 $sans-serif-narrow          : $sans-serif;
 $helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
+
+/* Display type — used for the hero and section headings */
+$display-font-family        : $sans-serif;
+$mono-font-family           : $monospace;
 
 /* Serif typefaces */
 $georgia                    : Georgia, serif;
@@ -30,18 +34,18 @@ $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 
 /* Type scale */
-$type-size-1                : 2.441em;  // ~39.056px
-$type-size-2                : 1.953em;  // ~31.248px
-$type-size-3                : 1.563em;  // ~25.008px
-$type-size-4                : 1.25em;   // ~20px
-$type-size-5                : 1em;      // ~16px
-$type-size-6                : 0.75em;   // ~12px
-$type-size-7                : 0.6875em; // ~11px
-$type-size-8                : 0.625em;  // ~10px
+$type-size-1                : 3.125em;  // ~50px  — display
+$type-size-2                : 2.25em;   // ~36px
+$type-size-3                : 1.75em;   // ~28px  — h1
+$type-size-4                : 1.3125em; // ~21px  — h2
+$type-size-5                : 1.0625em; // ~17px  — h3
+$type-size-6                : 0.8125em; // ~13px  — metadata
+$type-size-7                : 0.75em;   // ~12px
+$type-size-8                : 0.6875em; // ~11px
 
 $global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
-$caption-font-family        : $serif;
+$header-font-family         : $display-font-family;
+$caption-font-family        : $sans-serif;
 
 /* ==========================================================================
    Breakpoints
@@ -54,6 +58,10 @@ $medium                     : 768px !default;
 $medium-wide                : 900px !default;
 $large                      : 925px !default;
 $x-large                    : 1280px !default;
+
+/* The site frame: masthead, hero and content all share this measure so
+   every element lines up on one left edge at every viewport width. */
+$content-width              : 1040px !default;
 
 /* ==========================================================================
    Grid

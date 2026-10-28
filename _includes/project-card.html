@@ -1,0 +1,45 @@
+{% include base_path %}
+
+{% assign card = include.post %}
+<article class="project-card">
+  <div class="project-card__rail">
+    {% if include.index %}
+      <span class="project-card__index" aria-hidden="true">{% if include.index < 10 %}0{% endif %}{{ include.index }}</span>
+    {% endif %}
+    {% if card.role %}<span class="project-card__role">{{ card.role }}</span>{% endif %}
+    {% if card.period %}<span class="project-card__period">{{ card.period }}</span>{% endif %}
+    {% if card.status %}<span class="project-card__status">{{ card.status }}</span>{% endif %}
+  </div>
+
+  <div class="project-card__main">
+    {% comment %}The heading level follows the context: the homepage cards sit
+       under an h2 section, the research index sits directly under the page
+       title, so the card title takes the next level down in each case.{% endcomment %}
+    {% capture card_title %}<a href="{{ base_path }}{{ card.url }}">{{ card.title }}</a>{% endcapture %}
+    {% if include.heading_level == "h2" %}
+      <h2 class="project-card__title">{{ card_title }}</h2>
+    {% else %}
+      <h3 class="project-card__title">{{ card_title }}</h3>
+    {% endif %}
+
+    {% if card.subtitle %}
+      <p class="project-card__subtitle">{{ card.subtitle }}</p>
+    {% endif %}
+
+    {% assign card_summary = card.card_summary | default: card.excerpt %}
+    {% if card_summary %}
+      <p class="project-card__summary">{{ card_summary | markdownify | strip_html | strip_newlines }}</p>
+    {% endif %}
+
+    {% if card.card_keywords %}
+      <p class="project-card__keywords"><strong>Keywords:</strong> {{ card.card_keywords }}</p>
+    {% endif %}
+
+    <div class="project-card__footer">
+      {% if card.card_facts %}
+        <span class="project-card__fact">{{ card.card_facts }}</span>
+      {% endif %}
+      <a class="project-card__link" href="{{ base_path }}{{ card.url }}">Open record <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</article>

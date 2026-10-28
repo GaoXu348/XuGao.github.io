@@ -1,34 +1,4 @@
 {% include base_path %}
 
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <h2 class="archive__item-title" itemprop="headline">
-      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-    </h2>
-
-    {% if post.subtitle %}
-      <p class="archive__item-excerpt"><em>{{ post.subtitle }}</em></p>
-    {% endif %}
-
-    {% if post.excerpt %}
-      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-    {% endif %}
-
-    {% if post.role or post.period %}
-      <p class="page__meta">
-        {% if post.role %}{{ post.role }}{% endif %}{% if post.role and post.period %} &middot; {% endif %}{% if post.period %}{{ post.period }}{% endif %}
-      </p>
-    {% endif %}
-
-    {% comment %}Optional: card_keywords adds a short keyword line to the listing card only. Records without it render exactly as before.{% endcomment %}
-    {% if post.card_keywords %}
-      <p class="page__meta"><strong>Keywords:</strong> {{ post.card_keywords }}</p>
-    {% endif %}
-  </article>
-</div>
+{% comment %}Research records use the same card component as the homepage featured projects, so the visual language is shared across the site.{% endcomment %}
+{% include project-card.html post=post index=forloop.index heading_level="h2" %}

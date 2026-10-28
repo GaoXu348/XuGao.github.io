@@ -9,6 +9,8 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
+default_theme            : "dark"   # Colour scheme served on first load: "dark" or "light".
+                                # The masthead toggle overrides this and persists the choice.
 title                    : "Xu Gao"
 title_separator          : "-"
 name                     : &name "Xu Gao"

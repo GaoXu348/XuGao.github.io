@@ -1,0 +1,400 @@
+/* ==========================================================================
+   HOMEPAGE — hero, featured records, homepage prose
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  padding: 3.4rem 0 2.4rem;
+  border-bottom: 1px solid var(--tech-rule);
+  background-color: var(--global-bg-color);
+  background-image: linear-gradient(180deg, var(--tech-accent-soft) 0%, transparent 58%);
+  overflow: hidden;
+
+  &__inner {
+    @include container;
+    @include clearfix;
+    max-width: $content-width;
+    padding: 0 1em;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.2rem;
+
+    @include breakpoint($large) {
+      grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+      gap: 3.4rem;
+      align-items: start;
+    }
+  }
+
+  &__main {
+    min-width: 0;
+  }
+
+  &__identity {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+  }
+
+  &__avatar {
+    flex: none;
+    width: 78px;
+    height: 78px;
+    padding: 3px;
+    border-radius: 50%;
+    border: 1px solid var(--tech-rule);
+    background: var(--tech-surface);
+  }
+
+  &__id-text {
+    flex: 1 1 18rem;
+    min-width: 0;
+  }
+
+  &__eyebrow {
+    margin: 0 0 0.4em;
+    color: var(--tech-accent);
+    font-family: $mono-font-family;
+    font-size: $type-size-7;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $type-size-1;
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+  }
+
+  /* Section shortcuts ------------------------------------------------- */
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 2.1rem 0 0;
+  }
+
+  &__action {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.6em;
+    padding: 0.55em 1em;
+    border: 1px solid var(--tech-rule);
+    border-radius: $border-radius;
+    background: var(--tech-surface);
+    color: var(--global-text-color);
+    font-family: $mono-font-family;
+    font-size: $type-size-7;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: border-color $global-transition, color $global-transition, background-color $global-transition;
+
+    &:hover,
+    &:focus {
+      color: var(--tech-accent);
+      border-color: var(--tech-accent-line);
+      background: var(--tech-accent-soft);
+      text-decoration: none;
+    }
+  }
+
+  &__action-key {
+    color: var(--tech-text-faint);
+    font-size: 0.85em;
+  }
+
+  /* Identifiers panel ------------------------------------------------- */
+
+  &__panel {
+    padding: 1.1rem 1.25rem 1.25rem;
+    border: 1px solid var(--tech-rule);
+    border-radius: $border-radius;
+    background: var(--tech-surface);
+  }
+
+  &__panel-title {
+    margin: 0 0 0.85rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--tech-rule-soft);
+    color: var(--tech-text-faint);
+    font-family: $mono-font-family;
+    font-size: $type-size-8;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  &__panel-list {
+    margin: 0;
+    font-family: $mono-font-family;
+    font-size: $type-size-7;
+  }
+
+  &__panel-row {
+    display: grid;
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: 0.7rem;
+    padding: 0.4rem 0;
+
+    dt {
+      color: var(--tech-text-faint);
+      font-size: $type-size-8;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    dd {
+      margin: 0;
+      color: var(--global-text-color-light);
+      overflow-wrap: anywhere;
+
+      a {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+          color: var(--tech-accent);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(max-width $medium) {
+  .hero {
+    padding: 2.4rem 0 1.8rem;
+
+    &__title {
+      font-size: $type-size-2;
+    }
+
+    &__avatar {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Homepage body
+   -------------------------------------------------------------------------- */
+
+#main.home__main {
+  margin-top: 0;
+  max-width: $content-width;
+
+  /* Single column: the homepage has no identity rail. */
+  @include breakpoint($large) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.home__body {
+  padding: 2.8rem 0 0;
+}
+
+.home__content {
+
+  > p,
+  > ul,
+  > ol {
+    max-width: 68ch;
+  }
+
+  /* The opening paragraph is the page lead. */
+  > p:first-of-type {
+    max-width: 60ch;
+    font-size: $type-size-4;
+    line-height: 1.5;
+    color: var(--global-text-color-light);
+  }
+
+  .project-grid {
+    max-width: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Featured project cards
+   -------------------------------------------------------------------------- */
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 1.4rem 0 2.4rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  border: 1px solid var(--tech-rule);
+  border-radius: $border-radius;
+  background: var(--tech-surface);
+  overflow: hidden;
+  transition: border-color $global-transition, box-shadow $global-transition;
+
+  &:hover {
+    border-color: var(--tech-accent-line);
+    box-shadow: var(--tech-shadow);
+  }
+
+  /* Left rail — index, role, period, status ---------------------------- */
+  &__rail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1.3rem 1.15rem;
+    background: var(--tech-surface-2);
+    border-right: 1px solid var(--tech-rule);
+    color: var(--global-text-color-light);
+    font-family: $mono-font-family;
+    font-size: $type-size-7;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__index {
+    font-size: $type-size-3;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--tech-accent);
+  }
+
+  &__role {
+    color: var(--global-text-color);
+  }
+
+  &__period {
+    color: var(--tech-text-faint);
+  }
+
+  &__status {
+    margin-top: auto;
+    padding-top: 0.7rem;
+    color: var(--tech-text-faint);
+    font-size: $type-size-8;
+    letter-spacing: 0.06em;
+  }
+
+  /* Main column -------------------------------------------------------- */
+  &__main {
+    min-width: 0;
+    padding: 1.4rem 1.6rem 1.5rem;
+  }
+
+  &__title {
+    margin: 0 0 0.3em;
+    font-size: $type-size-4;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+  }
+
+  &__subtitle {
+    margin: 0 0 0.95em;
+    color: var(--tech-text-faint);
+    font-size: $type-size-6;
+    font-style: italic;
+  }
+
+  &__summary {
+    margin: 0 0 1.15em;
+    max-width: 66ch;
+    color: var(--global-text-color-light);
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.7rem 1.2rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--tech-rule-soft);
+  }
+
+  &__fact {
+    color: var(--global-text-color-light);
+    font-family: $mono-font-family;
+    font-size: $type-size-7;
+    letter-spacing: 0.03em;
+  }
+
+  &__link {
+    white-space: nowrap;
+    font-family: $mono-font-family;
+    font-size: $type-size-7;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__keywords {
+    margin: 0 0 1.15rem;
+    color: var(--tech-text-faint);
+    font-family: $mono-font-family;
+    font-size: $type-size-8;
+    letter-spacing: 0.03em;
+  }
+}
+
+/* Card link treatment. These selectors are deliberately more specific than
+   the generic `.archive a` rule, which underlines links in prose. */
+.project-card .project-card__title a {
+  color: var(--global-text-color);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--tech-accent);
+    text-decoration: none;
+  }
+}
+
+.project-card .project-card__link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+@include breakpoint(max-width $medium) {
+  .project-card {
+    grid-template-columns: minmax(0, 1fr);
+
+    &__rail {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.4rem 1rem;
+      padding: 0.85rem 1.1rem;
+      border-right: 0;
+      border-bottom: 1px solid var(--tech-rule);
+    }
+
+    &__index {
+      font-size: $type-size-4;
+    }
+
+    &__status {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    &__main {
+      padding: 1.15rem 1.15rem 1.25rem;
+    }
+  }
+}
