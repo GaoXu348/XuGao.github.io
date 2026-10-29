@@ -2,10 +2,9 @@
 title: "Evaluating Agents for Autonomous DFT Workflows"
 subtitle: "An Artifact-Grounded Testbed for Scientific Competence Diagnosis"
 excerpt: >-
-  I independently developed an artifact-grounded benchmark and evaluation
-  environment to investigate whether AI agents can interpret scientific
-  computation outputs, examine supporting evidence, and make reliable
-  judgments in DFT workflows.
+  I independently developed an artifact-grounded benchmark for evaluating
+  whether AI agents can interpret computational evidence and reach
+  defensible scientific judgments in DFT workflows.
 collection: research
 permalink: /research/dft-agent-benchmark/
 display_order: 1
@@ -14,7 +13,7 @@ period: "2026–Present"
 status: "Ongoing Research"
 research_areas: "AI for Science; Scientific Agents; Agent Evaluation; Computational Materials Science"
 keywords: "DFT, VASP, Scientific Reasoning, Artifact-Grounded Evaluation, Autonomous Scientific Workflows, Benchmark Validity"
-card_summary: "An artifact-grounded testbed for investigating the scientific competence of AI agents in DFT workflows. The research focuses on computational evidence inspection, case-specific scientific judgments, reproducible evaluation, and measurement validity."
+card_summary: "A research framework for evaluating the scientific decision-making of autonomous DFT agents using verifiable computational evidence."
 card_facts: "17 benchmark cases · 11 scientific challenges"
 researcher: "Xu Gao — sole researcher"
 ---
