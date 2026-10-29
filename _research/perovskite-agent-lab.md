@@ -1,12 +1,10 @@
 ---
 title: "Perovskite Agent Lab"
 subtitle: "Multi-Agent Orchestration and Scientific Tool Integration for Perovskite Materials Research"
-excerpt: |-
-  Perovskite Agent Lab explores how specialized AI agents can coordinate literature analysis, materials design, property prediction, and scientific simulations within a unified research workflow.
-
-  My work focuses on the materials-domain tool integration layer, including MCP-based scientific tool interfaces and computational workflow integration. The platform includes a 30-tool FastMCP foundation, while workflow demonstrations have connected agent-driven tasks to VASP calculations and SCAPS device simulations.
-
-  The research emphasizes reliable tool execution, scientific data provenance, and the distinction between successful computation and scientifically justified results.
+excerpt: >-
+  A collaborative AI4Science platform for perovskite materials research,
+  integrating scientific computing tools, simulation software, and
+  agent-assisted research workflows.
 collection: research
 permalink: /research/perovskite-agent-lab/
 display_order: 2
@@ -16,7 +14,7 @@ status: "Ongoing Research & Development"
 research_areas: "AI for Science; Scientific Agents; Multi-Agent Systems; Computational Materials Science; Perovskite Photovoltaics"
 keywords: "Scientific Tool Integration, Model Context Protocol, FastMCP, Materials Informatics, VASP, Scientific Workflow Orchestration, Simulation-Driven Research"
 card_keywords: "AI for Science, Multi-Agent Systems, MCP, Perovskite Photovoltaics, Scientific Computing"
-card_summary: "A multi-agent research platform exploring scientific tool integration and computational workflows for perovskite materials. My contributions focus on materials-domain MCP/Skills integration and agent-accessible scientific tools, alongside collaborative demonstrations involving VASP and SCAPS."
+card_summary: "An extensible AI4Science platform integrating scientific computing tools, simulation software and agent-assisted research processes. My contributions focus on materials-domain tool integration."
 card_facts: "30 registered FastMCP tools · VASP and SCAPS demonstrations"
 researcher: "Collaborative research effort — materials-domain MCP/Skills track"
 ---
