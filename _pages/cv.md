@@ -3,6 +3,7 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+excerpt: "Curriculum vitae of Xu Gao: education, research experience, technical skills, publications and honors."
 redirect_from:
   - /resume
 ---
@@ -12,55 +13,61 @@ redirect_from:
 Education
 ------
 
-* B.S. in **Theoretical and Applied Mechanics** & **Energy and Power Engineering**, Tsinghua University, 2025
-  * Certificate of **Industrial Engineering and Data Science** issued by Department of Industrial Engineering, Tsinghua University
-  * Certificate of **Artificial Intelligence Innovation and Entrepreneurship Enhancement Program** issued by Fundamental Industry Training Center, Tsinghua University
+* **Undergraduate**, Xingjian College, Tsinghua University — Sep.2021–Jun.2026
+  * Double Major: **Theoretical and Applied Mechanics** & **Energy and Power Engineering**
+  * Certificate: **Industrial Engineering and Data Science**, Department of Industrial Engineering
+  * Certificate: **Artificial Intelligence Innovation and Entrepreneurship Enhancement Program**, Fundamental Industry Training Center
 
-Research experience(Click to see more details)
+Research Experience
 ------
-* **Jan.2025-Jun.2025**: **Physics-Informed Deep Learning for Geolocatable Photovoltaic Forecasting**
-  * Researcher in 李水清's lab, Department of Energy and Power Engineering, Tsinghua University
-  * **Engineered a physics-informed deep learning pipeline** for ultra-short-term photovoltaic forecasting, integrating Partial Differential Equations (PDEs) via the PhyDNet architecture to model realistic cloud motion and dissipation.
-  * **Developed a multi-stage framework** involving cloud classification (91% accuracy), physics-constrained future image prediction, and 3D cloud field reconstruction with enhanced spatiotemporal consistency.
-  * **Pioneered a method for generating geolocatable solar irradiance maps** from 2D sky images, a novel contribution that provides actionable, high-resolution data for grid operators.
-  * **Designed and built an experimental data acquisition platform** to collect synchronized all-sky images, shadow textures, and irradiance data, addressing a critical gap in existing datasets.
 
-* **Nov.2024-Apr.2025**: **Downscaling of Long-Range Climate Prediction Models Based on Sup3r** 
-  * Researcher in 张达's lab, School of Environment, Tsinghua University
-  * **Led the domain adaptation and data preprocessing pipeline** for the NREL sup3r generative model, originally trained on U.S. geophysical data. Reconciled format discrepancies and processed 18 years of multi-variable Chinese climate data (temperature, wind speed at multiple altitudes, solar irradiance, humidity) for the Anhui case study.
-  * **Engineered a generative adversarial network (GAN) to perform high-resolution climate downscaling.** The model ingests readily available, long-term, low-resolution data and generates high-fidelity output, enhancing spatial resolution from 100km to 30km and temporal resolution from 72 hours to 24 hours. This approach directly addresses the critical challenge of scarce and dispersed global high-resolution training data.
-  * **Validated the model's utility for climate prediction post-processing.** Successfully applied the framework to downscale and refine the low-resolution outputs from multiple climate forecast models, demonstrating its versatility for producing high-resolution climate projections over decadal timescales.
+* **Artifact-Grounded Benchmark for Autonomous DFT Agent Frameworks** — Jul.2026–Present
+  * Researcher in Yuyu Luo's lab, DSA, HKUST-GZ
+  * **Workflow-level benchmarking:** developing a benchmark framework to evaluate autonomous DFT agent frameworks at the scientific workflow level, moving beyond isolated tool-use tasks and final-output correctness to assess end-to-end scientific decision-making.
+  * **Artifact-grounded evaluation:** establishing evidence-based criteria for convergence verification, computational provenance, and downstream workflow compatibility, with controlled counterfactual tests to examine whether workflow transitions and computational-reuse decisions are justified by scientific evidence.
 
-* Feb.2024-Jun.2024: Structural Engineering of Pt-based Intermetallic Catalysts for Fuel
-  * Researcher in 张亮's lab, Center for Combustion Energy, THU
-  * Designed PtCoMn/PtCoTi trimetalli catalysts using DFT calculations and Monte Carlo simulations.
-  * Validation through HAADF-STEM characterization and electrochemical test.
-  
-* Nov.2023-Jan.2024: Prolong Life Cycle of High Frequency Dielectric Elastomer Actuator
-  * Researcher in 赵慧婵's lab, Department of Mechanical Engineering, THU
-  * Investigation on basic principles of DEAs and soft, flexible bioaterials and electronics.
+* **AgentLab for Perovskite Materials: An Agentic Platform for Scientific Workflows** — Apr.2026–Present
+  * Researcher in Yuyu Luo's lab, DSA, HKUST-GZ
+  * **Platform architecture:** designed an extensible agent platform with modular MCP-based interfaces for orchestrating scientific software and simulation workflows, with a pathway toward laboratory-instrument integration.
+  * **Scientific workflow integration:** built a workflow connecting natural-language task specification, HPC/SLURM job orchestration, VASP-based first-principles calculations, automated result parsing, and SCAPS device simulation, enabling structured data transfer across scientific tools.
 
-* Sep.2022-May.2023: Cage-shaped Self-folding Mechanical Metamaterials
-  * Researcher in 陈常青's lab, Department of Aerospace Engineering, THU
-  * Validation through theories, Abaqus and otherrelevant techniques.
-  * Experiments: set experiment environment, lab design, and data simulation, etc.
-  * Writing part of the paper and edit & reviewing. 
+* **Photovoltaic Power Generation Ultra-Short-Term Forecasting by ML & CV** — Jan.2025–Jun.2025
+  * Researcher in Shuiqing Li's lab, Department of Energy and Power Engineering, Tsinghua University
+  * Developed a novel hybrid model integrating cloud motion and shadow generation for PV power prediction.
+  * Awarded Outstanding Undergraduate Thesis in Energy and Power Engineering, Tsinghua University.
 
-* Mar.2022-Jun.2022: Analysis of the Power System for Electric Unmanned Aerial Vehicles
-  * Researcher in 胡尊严's lab, School of Vehicle and Mobility, THU
-  * Overview of UAV power systems and simulation experiments of fixed-wing UAV power systems.
+* **Downscaling of Long-Range Climate Prediction Models** — Nov.2024–Apr.2025
+  * Researcher in Da Zhang's lab, School of Environment, Tsinghua University
+  * Adapted the NREL Super3 model for high-resolution climate downscaling over China (Anhui case study).
+  * Processed 18 years of data, achieving 30 km/24 h resolution (vs. traditional 100 km/72 h).
 
-Skills
+* **Structural Engineering of Pt-based Intermetallic Catalysts for Fuel Cells** — Feb.2024–Jun.2024
+  * Researcher in Liang Zhang's lab, Center for Combustion Energy, Tsinghua University
+  * Designed PtCoMn/PtCoTi trimetallic catalysts using DFT calculations and Monte Carlo simulations.
+  * Validation through HAADF-STEM characterization and electrochemical tests.
+
+* **Cage-shaped Self-folding Mechanical Metamaterials** — Sep.2022–May.2023
+  * Co-authorship; researcher in Changqing Chen's lab, Department of Aerospace Engineering, Tsinghua University
+  * Validation through theories, Abaqus and other relevant techniques.
+  * Experiments: set up the experimental environment, lab design, and data simulation.
+  * Writing part of the paper and editing & reviewing; published in the *International Journal of Solids and Structures*.
+
+Technical Skills
 ------
-* Abaqus, 3D print, Solidworks: Calibration & Validation
-* Coding
-  * Python for machine learning: Pytorch, Tensorflow
-  * Web construct: React, Flask, SQL
-  * Ai application: RAG, agent
-* Dedicated to dive in new area all the time
+
+* **Programming:** Python, Matlab
+* **Scientific Computing:** VASP, SCAPS, HPC/SLURM
+* **Modeling:** Machine Learning, Computer Vision, Monte Carlo, Abaqus, COMSOL, SolidWorks
 
 Publications
 ------
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+
+<ul>{% for post in site.publications reversed %}{% if post.category == "manuscripts" %}{% include archive-single-cv.html %}{% endif %}{% endfor %}</ul>
+
+A full list, including theses, research reports and project write-ups, is available on the [Publications]({{ site.baseurl }}/publications/) page.
+
+Honors & Awards
+------
+
+* Grand Prize of the 41st Challenge Cup of Tsinghua University, first author
+* Outstanding Undergraduate Thesis in Energy and Power Engineering, Tsinghua University, 2025
